@@ -35,6 +35,4 @@ def get_data():
     response = requests.get(api_url1, params=params)
     return jsonify(data)
 
-# Run the application
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+app.run(host='https://broadcast-llb2.onrender.com', port=5000)
