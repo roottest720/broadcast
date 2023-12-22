@@ -4,6 +4,7 @@ import requests
 app = Flask(__name__)
 
 # Define a simple route for handling GET requests
+@app.route('/')
 def hello():
     return 'Hello, World!'
 @app.route('/broadcast', methods=['GET'])
