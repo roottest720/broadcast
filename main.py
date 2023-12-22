@@ -4,6 +4,8 @@ import requests
 app = Flask(__name__)
 
 # Define a simple route for handling GET requests
+def hello():
+    return 'Hello, World!'
 @app.route('/broadcast', methods=['GET'])
 def get_data():
     bot_token = '6673598316:AAEGW38a7chRpOmlFmYGPpK4I6TVbOUDMf0'
@@ -35,4 +37,5 @@ def get_data():
     response = requests.get(api_url1, params=params)
     return jsonify(data)
 
-app.run(host='https://broadcast-llb2.onrender.com', port=5000)
+if __name__ == '__main__':
+    app.run()
